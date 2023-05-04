@@ -1,0 +1,13 @@
+*{
+    box-sizing: border-box;
+    color:#eee;
+    text-decoration: none;
+    list-style: none;
+  }
+
+#top_index {
+    position: relative;
+    height: 160px;
+    background-color: #fff;
+    border-bottom: 1px solid #e4e8eb;
+}

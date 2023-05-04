@@ -1,0 +1,72 @@
+#box {
+    display: flex;
+    width: 800px;
+    height: 900px;
+}
+#main {
+    width: 600px;
+    height: 100%;
+}
+#top_bar {
+    width: 600px;
+    height: 100px;
+}
+#menu {
+    width: 600px;
+    height: 50px;
+}
+#mid {
+    height: 750px;
+    text-align: center;
+}
+
+/* 상단 */
+#logo {
+    width: 120px;
+    height: 100px;
+    background-image: url(logo.png);
+    background-size: 100% 100%;
+    float: left;
+}
+#main_banner {
+    width: 480px;
+    height: 100px;
+    background-image: url(mainbanner.jpg);
+    background-size: 100% 100%;
+    float: left;
+}
+
+/* 매뉴 */
+#button {
+    width: 120px;
+    height: 50px;
+    float: left;
+    border: 1px solid skyblue;
+    background-color: rgba(0,0,0,0);
+    color: skyblue;
+    padding: 5px
+}
+#menu button:hover{
+    color:white;
+    background-color: skyblue;
+}
+
+/* 주매뉴 */
+#side_bar {
+    float: left;
+    width: 120px;
+    height: 100%;
+    background-size: 100% 100%;
+}
+#main_text {
+    width: 100%;
+    height: 100%;
+}
+
+/* 우측배너 */
+#banner {
+    width: 100%;
+    height: 100%;
+    background-image: url(banner.jpg);
+    background-size: 100% 100%;
+}

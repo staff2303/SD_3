@@ -1,0 +1,1 @@
+var int = Math.floor(Math.random() * 10)

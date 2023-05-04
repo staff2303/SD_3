@@ -1,0 +1,10 @@
+img{
+    border: 5px black dotted;
+    border-radius: 30px;
+    width: 408px;
+    height: 612px;
+}
+#padding{
+    margin:10px;
+    padding: 20px;
+}

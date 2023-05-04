@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>표태그/css</title>
+    <link rel="stylesheet" href="1-2.css">
+</head>
+<body>
+    <table border="5">
+        <tr>
+          <td>1행 1열</td>
+          <td>1행 2열</td>
+          <td>1행 3열</td>
+        </tr>
+        <tr>
+          <td>2행 1열</td>
+          <td>2행 2열</td>
+          <td>2행 3열</td>
+        </tr>
+        <tr>
+          <td>3행 1열</td>
+          <td>3행 2열</td>
+          <td>3행 3열</td>
+        </tr>
+      </table>
+      <table border=5>
+        <caption>표제목caption</caption>
+        <thead>
+          <tr>
+            <th>no.</th>
+            <th>종류</th>
+            <th>색</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>1</th>
+            <td>고양이</td>
+            <td>검정</td>
+          </tr>
+          <tr>
+            <th>2</th>
+            <td>개</td>
+            <td>흰색</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3">애완동물</td> <!--colspan 열 합치기-->
+          </tr> <!--rowspan 행 합치기-->
+        </tfoot>
+      </table>
+    <table>
+        <tr>
+          <td colspan=2>a</td>
+          <td>a</td>
+        </tr>
+        <tr>
+          <td>a</td>
+          <td colspan=2>a</td>
+        </tr>
+        <tr>
+          <td rowspan=2>a</td>
+          <td>a</td>
+          <td>a</td>
+        </tr>
+        <tr>
+          <td>a</td>
+          <td>a</td>
+        </tr>  
+      </table>   
+      <!--colspan 열(가로) 합치기-->
+      <!--rowspan 행(세로) 합치기-->
+</body>
+</html>

@@ -1,0 +1,22 @@
+for (var y = 0; y < 10; y++) {
+    for (var s = 0; s < y; s++) {
+        document.write("　");
+    }
+    for (var x = 10; x > y; x--) {
+        document.write('☆');
+    }
+    document.write('<br>');
+}
+
+
+/* for(var i=1; i<=10; i=i+1){
+
+    for(var k=1; k <= i - 1; k=k+1){
+        document.write("&nbsp;")
+    }
+
+    for(var j=10; j>=i; j=j-1){
+        document.write("*");
+    }
+    document.write("<br>");
+} */

@@ -1,0 +1,8 @@
+div#ig{
+    width: 100px; height: 100px;
+    background: linear-gradient(to right bottom, red, blue);
+}
+div#ie{
+    width: 100px; height: 100px;
+    background: linear-gradient(135deg, black, white);
+}

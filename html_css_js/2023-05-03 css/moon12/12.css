@@ -1,0 +1,24 @@
+h1 {
+    background: red;
+    width: 160px;
+
+    transition-property: width, background-color;
+    transition-duration: 1s;
+}
+h2 {
+    background: blue;
+    width: 500px;
+
+    transition-property: width, background-color;
+    transition-duration: 1s;
+}
+
+h1:hover {
+    background-color: blue;
+    width: 500px;
+}
+
+h2:hover {
+    background-color: red;
+    width: 150px;
+}

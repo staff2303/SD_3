@@ -1,0 +1,20 @@
+img {
+    width: 128px;
+    height: 192px;
+}
+
+table {
+    margin-left:auto; 
+    margin-right:auto;
+    border: 1px solid #444444;
+    
+}
+tr, td {
+    border: 1px solid #444444;
+    text-align: center;
+    vertical-align : middle;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
