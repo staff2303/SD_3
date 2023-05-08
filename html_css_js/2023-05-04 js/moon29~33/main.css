@@ -1,0 +1,36 @@
+/* 컴퓨터 */
+#computer_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+#computer_box > img {
+    border: 2px solid red;
+    width: 250px;
+    height: 350px;
+}
+/* 유저 */
+#user_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+#user_box > img {
+    cursor: pointer;
+    border: 2px solid blue;
+    width: 250px;
+    height: 350px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+/* 결과 */
+#result_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}

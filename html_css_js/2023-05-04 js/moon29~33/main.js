@@ -1,46 +1,68 @@
 var player;
 var computer;
 var result;
+var imgArray = new Array();
+imgArray[0] = "gawe.png";
+imgArray[1] = "bawe.png";
+imgArray[2] = "bo.png";
+var i = 0;
+var img;
+var game_result;
 
-function playerinput(){
-     while(true){
-        var str = prompt("가위 ~ 바위 ~ 보");
-        if (str == "가위" || str == "바위" || str == "보") {
-            break;
-        } else {
-            alert("정확히 입력해주세요");
-        }
-    }
-    return str;
+window.onload = function seting() {
+    img = document.getElementById("computer_img");
+    plyer_input = document.getElementById("plyer_input");
+    com_input = document.getElementById("com_input");
+    game_result = document.getElementById("result");
 }
+const intervalId = setInterval(showimg, 50);
+
+function showimg() {
+    i = Math.floor(Math.random() * 3)
+    img.src = imgArray[i];
+}
+
+
+
+function input_gawe() {
+    clearInterval(intervalId);
+    player = "가위";
+    computerinput();
+}
+function input_bawe() {
+    clearInterval(intervalId);
+    player = "바위";
+    computerinput()
+}
+function input_bo() {
+    clearInterval(intervalId);
+    player = "보";
+    computerinput()
+}
+
 function computerinput(){
-    var num = Math.floor(Math.random() * 3) + 1;
-    switch(num){
+    switch(i){
+        case 0:
+            computer = "가위";
+            break;
         case 1:
-            return "가위";
+            computer = "바위";
+            break;
         case 2:
-            return "바위";
-        case 3:
-            return "보";
+            computer = "보";
+            break;
     }
+    game_result.innerText = gameresult();
 }
+
 function gameresult(){
     if (player == computer) {
-        return "비김";
+        return "비겼다!";
     } else if (((player == "가위") && (computer == "보")) ||
                ((player == "바위") && (computer == "가위")) ||
                ((player == "보") && (computer == "바위"))) {
-        return "이김";
+        return "이겼다!";
     } else {
-        return "짐";
+        return "졌다!";
     }
 }
-
-player = playerinput();
-computer = computerinput();
-result = gameresult();
-document.write("플레이어 : " + player);
-br();
-document.write("컴 퓨 터 : " + computer);
-br();
-document.write("결과 : " + result);

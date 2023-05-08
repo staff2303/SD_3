@@ -1,13 +1,25 @@
-<!DOCTYPE html>	
+<!DOCTYPE html>
+
 <head>
 	<meta charset="UTF-8">
 	<title>js 문29~33</title>
 	<script src="../common.js"> </script>
 	<script src="main.js"> </script>
-</head>	
-	<img src="com_gawe.png">
-	<img src="com_bawe.png">
-	<img src="com_bo.png">
-<body>	
-</body>	
-</html>	
+	<link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+	<div id="computer_box">
+		<img id="computer_img" src="bo.png">
+	</div>
+	<div id="user_box">
+		<img id="user_img" src="gawe.png" onclick="input_gawe()">
+		<img id="user_img" src="bawe.png" onclick="input_bawe()">
+		<img id="user_img" src="bo.png" onclick="input_bo()">
+	</div>
+	<div id = "result_box">
+		<p id="result">결과</p>
+	</div>
+</body>
+
+</html>
