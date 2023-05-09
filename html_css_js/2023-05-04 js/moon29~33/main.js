@@ -22,8 +22,6 @@ function showimg() {
     img.src = imgArray[i];
 }
 
-
-
 function input_gawe() {
     clearInterval(intervalId);
     player = "가위";

@@ -1,11 +1,129 @@
-<!DOCTYPE html>	
+<!DOCTYPE html>
+<html lang="ko">
+
 <head>
 	<meta charset="UTF-8">
 	<title>js 문 lotto</title>
 	<script src="lotto.js"> </script>
 	<link rel="stylesheet" href="lotto.css">
-</head>	
-<body>	
-	
-</body>	
-</html>	
+</head>
+
+<body>
+	<div id="maintext">
+		<div class="mainheader">
+			<h1>
+				<span style="color: orange;">PLAY <span style="color: blue;">L<span style="color: skyblue;">O<span style="color: blue;">TT<span style="color: lightgreen;">O
+			</h1>
+		</div>
+	</div>
+	<div><h1>추첨번호</h1></div>
+	<div id="computer_box"></div>
+	<div><h1>선택번호</h1></div>
+	<div id="user_box"></div>
+	<div id="user_chkbox">
+		<div>
+			<input type='checkbox' class='user_num' onclick='count_check()' value='1'>
+			<label for='scales'>01</label>
+			<input type='checkbox' class='user_num' onclick='count_check()' value='2'>
+			<label for='scales'>02</label>
+			<input type='checkbox' class='user_num' onclick='count_check()' value='3'>
+			<label for='scales'>03</label>
+			<input type='checkbox' class='user_num' onclick='count_check()' value='4'>
+			<label for='scales'>04</label>
+			<input type='checkbox' class='user_num' onclick='count_check()' value='5'>
+			<label for='scales'>05</label>
+			<input type='checkbox' class='user_num' onclick='count_check()' value='6'>
+			<label for='scales'>06</label>
+			<input type='checkbox' class='user_num' onclick='count_check()' value='7'>
+			<label for='scales'>07</label>
+			<input type='checkbox' class='user_num' onclick='count_check()' value='8'>
+			<label for='scales'>08</label>
+			<input type='checkbox' class='user_num' onclick='count_check()' value='9'>
+			<label for='scales'>09</label>
+		</div>
+		<div>
+			<input type='checkbox' class='user_num' onclick='count_check()' value='10'>
+			<label for='scales'>10</label>
+			<input type='checkbox' class='user_num' onclick='count_check()' value='11'>
+			<label for='scales'>11</label>
+			<input type='checkbox' class='user_num' onclick='count_check()' value='12'>
+			<label for='scales'>12</label>
+			<input type='checkbox' class='user_num' onclick='count_check()' value='13'>
+			<label for='scales'>13</label>
+			<input type='checkbox' class='user_num' onclick='count_check()' value='14'>
+			<label for='scales'>14</label>
+			<input type='checkbox' class='user_num' onclick='count_check()' value='15'>
+			<label for='scales'>15</label>
+			<input type='checkbox' class='user_num' onclick='count_check()' value='16'>
+			<label for='scales'>16</label>
+			<input type='checkbox' class='user_num' onclick='count_check()' value='17'>
+			<label for='scales'>17</label>
+			<input type='checkbox' class='user_num' onclick='count_check()' value='18'>
+			<label for='scales'>18</label>
+		</div>
+		<div>
+			<input type='checkbox' class='user_num' onclick='count_check()' value='19'>
+			<label for='scales'>19</label>
+			<input type='checkbox' class='user_num' onclick='count_check()' value='20'>
+			<label for='scales'>20</label>
+			<input type='checkbox' class='user_num' onclick='count_check()' value='21'>
+			<label for='scales'>21</label>
+			<input type='checkbox' class='user_num' onclick='count_check()' value='22'>
+			<label for='scales'>22</label>
+			<input type='checkbox' class='user_num' onclick='count_check()' value='23'>
+			<label for='scales'>23</label>
+			<input type='checkbox' class='user_num' onclick='count_check()' value='24'>
+			<label for='scales'>24</label>
+			<input type='checkbox' class='user_num' onclick='count_check()' value='25'>
+			<label for='scales'>25</label>
+			<input type='checkbox' class='user_num' onclick='count_check()' value='26'>
+			<label for='scales'>26</label>
+			<input type='checkbox' class='user_num' onclick='count_check()' value='27'>
+			<label for='scales'>27</label>
+		</div>
+		<div>
+			<input type='checkbox' class='user_num' onclick='count_check()' value='28'>
+			<label for='scales'>28</label>
+			<input type='checkbox' class='user_num' onclick='count_check()' value='29'>
+			<label for='scales'>29</label>
+			<input type='checkbox' class='user_num' onclick='count_check()' value='30'>
+			<label for='scales'>30</label>
+			<input type='checkbox' class='user_num' onclick='count_check()' value='31'>
+			<label for='scales'>31</label>
+			<input type='checkbox' class='user_num' onclick='count_check()' value='32'>
+			<label for='scales'>32</label>
+			<input type='checkbox' class='user_num' onclick='count_check()' value='33'>
+			<label for='scales'>33</label>
+			<input type='checkbox' class='user_num' onclick='count_check()' value='34'>
+			<label for='scales'>34</label>
+			<input type='checkbox' class='user_num' onclick='count_check()' value='35'>
+			<label for='scales'>35</label>
+			<input type='checkbox' class='user_num' onclick='count_check()' value='36'>
+			<label for='scales'>36</label>
+		</div>
+		<div>
+			<input type='checkbox' class='user_num' onclick='count_check()' value='37'>
+			<label for='scales'>37</label>
+			<input type='checkbox' class='user_num' onclick='count_check()' value='38'>
+			<label for='scales'>38</label>
+			<input type='checkbox' class='user_num' onclick='count_check()' value='39'>
+			<label for='scales'>39</label>
+			<input type='checkbox' class='user_num' onclick='count_check()' value='40'>
+			<label for='scales'>40</label>
+			<input type='checkbox' class='user_num' onclick='count_check()' value='41'>
+			<label for='scales'>41</label>
+			<input type='checkbox' class='user_num' onclick='count_check()' value='42'>
+			<label for='scales'>42</label>
+			<input type='checkbox' class='user_num' onclick='count_check()' value='43'>
+			<label for='scales'>43</label>
+			<input type='checkbox' class='user_num' onclick='count_check()' value='44'>
+			<label for='scales'>44</label>
+			<input type='checkbox' class='user_num' onclick='count_check()' value='45'>
+			<label for='scales'>45</label>
+		</div>
+		<div>
+			<button onclick='num_check()'>확인</button>
+		</div>
+	</div>
+</body>
+</html>
