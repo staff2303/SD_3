@@ -1,3 +1,81 @@
+/* 메인화면 */
+* {
+  box-sizing: border-box;
+}
+body {
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: #1C1C25;
+  font-family: 'Montserrat';
+}
+:root {
+  --gold: #ffb338;
+  --light-shadow: #77571d;
+  --dark-shadow: #3e2904;
+}
+body {
+  margin: 0;
+}
+/* play lotto */
+.wrapper {
+  display: grid;
+  grid-template-areas: 'overlap';
+  place-content: center;
+  text-transform: uppercase;
+  height: 12vh;
+}
+.wrapper > #main {
+  background-clip: text;  
+  -webkit-background-clip: text;
+  color: #363833;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100%;
+  font-size: clamp(1rem, 13vw, 5rem);
+  grid-area: overlap;
+  letter-spacing: 1px;
+  -webkit-text-stroke: 4px transparent;
+}
+.subtext {
+  display: grid;
+  grid-template-areas: 'overlap';
+  place-content: center;
+  text-transform: uppercase;
+  height: 8vh;
+}
+.subtext > #sub {
+  background-clip: text;  
+  -webkit-background-clip: text;
+  color: #363833;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100%;
+  font-size: clamp(1rem, 10vw, 2.5rem);
+  grid-area: overlap;
+  letter-spacing: 1px;
+  -webkit-text-stroke: 4px transparent;
+}
+div.bg {
+  background-image: repeating-linear-gradient( 105deg, 
+    var(--gold) 0% , 
+    var(--dark-shadow) 5%,
+    var(--gold) 12%);
+  color: transparent;
+  filter: drop-shadow(5px 15px 15px black);
+  transform: scaleY(1.05);
+  transform-origin: top;
+}
+div.fg{
+  background-image: repeating-linear-gradient( 5deg,  
+    var(--gold) 0% , 
+    var(--light-shadow) 23%, 
+    var(--gold) 31%);
+  color: #1e2127;
+  transform: scale(1);
+}
+/* 공 */
 .ball {
     float: left;
     width: 60px;
@@ -12,19 +90,19 @@
     text-shadow: 0px 0px 3px rgba(73, 57, 0, .8);
     margin-right: 6px;
 }
-
+/* 컴퓨터 번호 */
 .com{
     background: skyblue;
 }
-
+/* 유저 번호 */
 .user{
     background: lightgreen;
 }
-
+/* 행운 번호 */
 .luck{
     background: orange;
 }
-
+/* 박스 */
 #computer_box {
     display: flex;
     justify-content: center;
@@ -46,6 +124,9 @@
     align-items: center;
     width: 100%;
     margin-bottom: 10px;
+    margin-top: 30px;
+    font-size: 20px;
+    color: #C4C4C4;
 }
 #maintext {
     display: flex;
@@ -54,44 +135,102 @@
     width: 100%;
     margin-bottom: 10px;
 }
-/* 메인화면 */
-.mainheader h1 {
-    position: relative;
-    font-size: 100px;
-    letter-spacing: 0px;
-    text-transform: uppercase;
-    width: 600px;
-    text-align: center;
-    margin: auto;
-    white-space: nowrap;
-    border: 2px solid #222;
-    padding: 1px 11px 5px 11px;
+/* 버튼css */
+.button {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  background-color: #25252F;
+  filter: drop-shadow(0 10px 0 #101016);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all ease 0.1s;
+  position: relative;
+  top: -5px;
 }
-.mainheader span {
-    margin: 0;
-    padding: 0;
+.fa {
+  color: #656572;
 }
-.mainheader h1:before {
-    background-color: green;
-    position: absolute;
-    content: '';
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-    bottom: 40px;
+.button:hover {
+  transform: translate(0, 10px);
+  filter: none;
+  clip-path: circle(50%);
 }
-.mainheader h1:after {
-    background-color: blue;
-    position: absolute;
-    content: '';
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-    bottom: 40px;
+.button:hover > .fa {
+  color: #C4C4C4;
 }
-.mainheader h1:before {
-    left: -100px;
+.button:active {
+  filter: drop-shadow(0 -10px 0 #101016);
+  transform: translate(0, 20px);
+  clip-path: circle(50% at 50px 40px);
+  background-color: #21212A;
 }
-.mainheader h1:after {
-    right: -100px;
+.cont {
+  background-color: #25252F;
+  border-radius: 15px;
+  transition: all ease 0.3s;
+  filter: drop-shadow(0 0 10px rgb(0,0,0,30%));
+  border: solid 0.5px #25252F;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  margin-top: 30px;
+}
+.cont:hover {
+  background-color: #2D2D38;
+  border: solid 0.5px #97979B;
+}
+.cont2 {
+  height: 100px;
+  width: 100px;
+  background-color: #1C1C25;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.screws {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 75px;
+}
+.screw {
+  height: 5px;
+  width: 5px;
+  background-color: #3B3B44;
+  border-radius: 100%;
+}
+.button-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 10px;
+}
+p {
+  color: #C4C4C4;
+  line-height: 0;
+  font-size: 12px;
+}
+
+.congratulations {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 40px;
+  text-align: center;
+  color: #FFC107;
+  opacity: 1;
+  position: absolute;
+  letter-spacing: 0.1em;
+  text-shadow: 0px 0px 20px #FFC107;
+  margin-top: 50px;
 }
