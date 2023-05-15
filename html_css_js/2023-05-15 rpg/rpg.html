@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="rpg.css">
+    <script src="common.js"></script>
+    <title>rpg game</title>
+</head>
+<body>
+    <div class="maintitle"><h1>TEXT RPG GAME</h1></div>
+    <div class="mainUI">
+        <div class="player">
+            <div class="player-name">플레이어이름</div>
+            <div class="player-job">모험가</div>
+            <strong class="title">LEVEL</strong>
+            <div class="level">1</div>
+            <div class="hpBar">
+                <strong class="title">HP</strong>
+                <div class="contents">
+                  <div class="bar">
+                    <div class="currentBar" style="width: 80%;"></div>
+                    <div class="hpText">80/100 (80%)</div>
+                  </div>
+                </div>
+            </div>
+            <div class="expBar">
+                <strong class="title">EXP</strong>
+                <div class="contents">
+                  <div class="bar">
+                    <div class="currentBar" style="width: 10%;"></div>
+                    <div class="expText">10/100 (10%)</div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="enemy">
+            <div class="player-name">적이름</div>
+            <div class="player-job">몬스터</div>
+            <strong class="title">LEVEL</strong>
+            <div class="level">1</div>
+            <div class="hpBar">
+                <strong class="title">HP</strong>
+                <div class="contents">
+                  <div class="bar">
+                    <div class="currentBar" style="width: 80%;"></div>
+                    <div class="hpText">80/100 (80%)</div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="battlebtn">
+          <button class="btn ATK">공격</button>
+          <button class="btn RUN">도망</button>
+    </div>
+    <div id="log"></div>
+    </div>
+</body>
+<script src="rpg.js"></script>
+</html>

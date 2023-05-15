@@ -1,0 +1,175 @@
+/* 메인타이틀 */
+h1 {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    color: #080808;
+}
+
+.maintitle h1 {
+    font-size: 50px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    width: 500px;
+    text-align: center;
+    margin: auto;
+    white-space: nowrap;
+    padding-bottom: 13px;
+}
+
+.maintitle h1:before {
+    background-color: #c50000;
+    content: '';
+    display: block;
+    height: 3px;
+    width: 150px;
+    margin-bottom: 5px;
+}
+
+.maintitle h1:after {
+    background-color: #c50000;
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    width: 150px;
+    margin-bottom: 5px;
+}
+
+/* 캐릭터 UI */
+.mainUI {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 30px;
+}
+
+.mainUI .player {
+    width: 200px;
+}
+.player-name {
+    font-size: 30px;
+}
+.player-job {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.level {
+    margin-bottom: 10px;
+}
+.mainUI .enemy {
+    width: 200px;
+}
+
+/* HP바 */
+.hpBar {
+    position: relative;
+}
+
+.hpBar .title {
+    font-size: 105%;
+    margin-top: 2px;
+}
+
+.hpBar .contents {
+    margin-top: 8px;
+    position: relative;
+    width: 100%;
+}
+
+.hpBar .bar {
+    height: 10px;
+    background-color: gainsboro;
+}
+
+.hpBar .currentBar {
+    height: 100%;
+    background-color: red;
+}
+
+.hpBar .hpText {
+    font-size: 60%;
+    text-align: center;
+}
+
+/* EXP바 */
+.expBar {
+    margin-top: 10px;
+    position: relative;
+}
+
+.expBar .title {
+    font-size: 105%;
+    margin-top: 2px;
+}
+
+.expBar .contents {
+    margin-top: 8px;
+    position: relative;
+    width: 100%;
+}
+
+.expBar .bar {
+    height: 10px;
+    background-color: gainsboro;
+}
+
+.expBar .currentBar {
+    height: 100%;
+    background-color: rgb(0, 255, 0);
+}
+
+.expBar .expText {
+    font-size: 60%;
+    text-align: center;
+}
+
+/* 배틀버튼 */
+.battlebtn {
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+    visibility: visible;
+}
+
+.battlebtn.on {
+    opacity: 1;
+    pointer-events: initial;
+}
+
+.battlebtn.hide {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.battlebtn .btn {
+    font-size: 14px;
+    border: 1px solid #555;
+    padding: 8px 15px;
+    color: #333;
+    cursor: pointer;
+    margin-left: 8px;
+    outline: 0;
+}
+
+.battlebtn .btn:hover {
+    background-color: red;
+    color: blue;
+}
+
+/* 로그표시 */
+#log {
+    margin-top: 30px;
+    height: calc(100vh - 440px);
+    margin-bottom: 40px;
+    min-height: 200px;
+    border: 1px solid rgba(138, 138, 138, 0.653);
+    padding: 30px;
+    overflow: scroll;
+    box-sizing: border-box;
+}
+
+#log p {
+    line-height: 100%;
+}
