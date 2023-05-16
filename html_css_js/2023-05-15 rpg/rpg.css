@@ -61,6 +61,10 @@ h1 {
 .mainUI .enemy {
     width: 200px;
 }
+.stat .title {
+    font-size: 105%;
+    margin-top: 2px;
+}
 
 /* HP바 */
 .hpBar {
@@ -96,6 +100,7 @@ h1 {
 /* EXP바 */
 .expBar {
     margin-top: 10px;
+    margin-bottom: 10px;
     position: relative;
 }
 

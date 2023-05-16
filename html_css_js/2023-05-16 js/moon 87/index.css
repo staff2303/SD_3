@@ -1,0 +1,35 @@
+#top {
+    width: 800px;
+    height: 200px;
+    background-color: red;
+}
+
+#left {
+    width: 200px;
+    height: 600px;
+    float: left;
+    background-color: orange;
+}
+
+#mid {
+    width: 600px;
+    height: 600px;
+    float: left;
+    background-color: yellow;
+}
+
+#bot {
+    width: 800px;
+    height: 200px;
+    clear: left;
+    background-color: green;
+}
+
+#pop {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 300px;
+    top: 300px;
+    background-color: purple;
+}

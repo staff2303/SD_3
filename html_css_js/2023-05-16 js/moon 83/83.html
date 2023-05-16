@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>문 83</title>
+    <script src="common.js"></script>
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <form>숫자만 입력
+        <br>
+        <input pattern="^[0-9]+$">
+        <input type="submit">
+    </form>
+    <br>
+    <form>영문 대소문자만
+        <br>
+        <input pattern="^[a-zA-Z]+$">
+        <input type="submit">
+    </form>
+    <br>
+    <form>영문 대소문자만(띄어쓰기 공백 가능)
+        <br>
+        <input pattern="^[a-zA-Z\s]+$">
+        <input type="submit">
+    </form>
+    <br>
+    <form>숫자, 영문 대소문자만
+        <br>
+        <input type="text" pattern="^[a-zA-Z0-9]+$">
+        <input type="submit">
+    </form>
+    <br>
+    <form>최소 8자리에서 최대 16자리까지 숫자, 영문,특수문자
+        <br>
+        각 1개 이상 포함 (암호 유효성 검사에 유용)
+        <br>
+        <input type="text" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,16}$">
+        <input type="submit">
+    </form>
+</body>
+</html>
