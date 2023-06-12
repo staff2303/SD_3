@@ -1,30 +1,31 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class test {
 	public static void main(String[] args) {
-		p193();
-		p199();
-	}
-
-	public static void p193() {
-		// 책.193 참고
-		String cat = "고양이";
-		String cat2 = "고양이";
-		String cat3 = new String("고양이");
-		String cat4 = new String("고양이");
-		// System.identityHashCode(cat) << 주소 값 출력함.
-		System.out.println(System.identityHashCode(cat));
-		System.out.println(System.identityHashCode(cat2));
-		System.out.println(System.identityHashCode(cat3));
-		System.out.println(System.identityHashCode(cat4));
-	}
-
-	public static void p199() {
-
-		char c = 'c';
-
-		System.out.println((int) c);
-
-		String cat = "고양이";
-		System.out.println(String.format("%10s", cat));
+		Connection conn = null; //DB 커넥션 연결 객체
+	    final String USERNAME = "root";//DBMS접속 시 아이디
+	    final String PASSWORD = "root";//DBMS접속 시 비밀번호
+	    final String URL = "jdbc:mysql://localhost:3306/staff2303";
+	    
+	    try {
+            System.out.println("생성자");
+            conn = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+            System.out.println("드라이버 로딩 성공");
+            java.sql.Statement st = conn.createStatement();
+            ResultSet result = st.executeQuery("select * from member");
+            while (result.next()) {	
+				String name = result.getString("name");
+				System.out.println(name);
+			}
+            
+        } catch (Exception e) {
+            System.out.println("드라이버 로딩 실패 ");
+            try {
+                conn.close();
+            } catch (SQLException e1) {    }
+        }
 	}
 }
