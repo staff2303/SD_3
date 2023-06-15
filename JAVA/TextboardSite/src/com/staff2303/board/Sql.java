@@ -12,13 +12,13 @@ public class Sql {
 	final String PASSWORD = "root";// DBMS접속 시 비밀번호
 	final String URL = "jdbc:mysql://localhost:3306/staff_board";
 	static Connection con = null;
-	static Statement st = null;
-	static ResultSet result = null;
-	static final String NUM = "NO";
-	static final String TITLE = "Title";
-	static final String WRITER = "Writer";
-	static final String DATE = "Date";
-	static final String HITS = "hits";
+	public static Statement st = null;
+	public static ResultSet result = null;
+	public static final String NUM = "NO";
+	public static final String TITLE = "Title";
+	public static final String WRITER = "Writer";
+	public static final String DATE = "Date";
+	public static final String HITS = "hits";
 	public static Scanner sc = new Scanner(System.in);
 
 	void run() {

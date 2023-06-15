@@ -1,6 +1,6 @@
 insert into board (b_title, b_writer, b_date, b_hits, b_content) 
 value (
-'test',
+'hello',
 'staff',
 now(),
 1,
