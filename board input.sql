@@ -1,8 +1,8 @@
 insert into board (b_title, b_writer, b_date, b_hits, b_content) 
 value (
-'hello',
-'staff',
+'수정할글',
+'user1',
 now(),
-1,
-'test'
+0,
+'수정할글입니다'
 );

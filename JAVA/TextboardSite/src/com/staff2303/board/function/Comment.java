@@ -3,6 +3,7 @@ package com.staff2303.board.function;
 import java.sql.SQLException;
 import java.util.Scanner;
 
+import com.staff2303.board.BoardMenu;
 import com.staff2303.board.Sql;
 
 public class Comment {
@@ -22,12 +23,10 @@ public class Comment {
 	}
 
 	static void writcomment(int no) {
-		System.out.println("작성자 : ");
-		String writer = sc.next();
 		System.out.println("내용 : ");
 		String ment = sc.next();
 		try {
-			Sql.st.executeUpdate("insert into comments (c_p_no, c_id, c_text, c_date) values (" + no + ",'" + writer + "','" + ment + "',now())");
+			Sql.st.executeUpdate("insert into comments (c_p_no, c_id, c_text, c_date) values (" + no + ",'" + BoardMenu.LOGINID + "','" + ment + "',now())");
 			System.out.println("댓글등록 완료");
 		} catch (SQLException e) {
 			e.printStackTrace();

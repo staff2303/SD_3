@@ -11,12 +11,12 @@ import com.staff2303.board.function.WritPost;
 
 public class BoardMenu {
 	static Scanner sc = new Scanner(System.in);
-	
-	static void run() {
+	static public String LOGINID = null;
+	static public String ROLE = null;
+
+	public static void run() {
 		mm: while (true) {
-			System.out.println(String.format("%20s", "┌────────────────────┐"));
-			System.out.println(String.format("%14s", "JAVA 게시판"));
-			System.out.println(String.format("%20s", "└────────────────────┘"));
+			Display.menu();
 			if (SearchPost.search == null) {
 				ShowList.run();
 			} else {
@@ -26,7 +26,7 @@ public class BoardMenu {
 			System.out.print("[2.글쓰기] ");
 			System.out.print("[3.글수정] ");
 			System.out.print("[4.글삭제] ");
-			System.out.println("[0.메인메뉴로]");
+			System.out.println("[0.로그아웃]");
 			int num = sc.nextInt();
 			switch (num) {
 			case 1:
@@ -53,7 +53,7 @@ public class BoardMenu {
 					ShowList.PAGE = ShowList.PAGE - 1;
 				} else {
 					SearchPost.PAGE = SearchPost.PAGE - 1;
-				}		
+				}
 				break;
 			case 7:
 				SearchPost.run();
@@ -62,6 +62,8 @@ public class BoardMenu {
 				SearchPost.search = null;
 				break;
 			case 0:
+				LOGINID = null;
+				ROLE = null;
 				break mm;
 			default:
 				break mm;
