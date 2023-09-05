@@ -10,6 +10,7 @@ public class Game {
 		int[] lotto = new int[6];
 		int[] player = new int[6];
 		Random random = new Random();
+		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 
 		for (int i = 0; i < player.length; i++) {

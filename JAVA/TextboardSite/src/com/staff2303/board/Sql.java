@@ -5,7 +5,6 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.Scanner;
 
 public class Sql {
 	final String USERNAME = "root";// DBMS접속 시 아이디
@@ -19,7 +18,6 @@ public class Sql {
 	public static final String WRITER = "Writer";
 	public static final String DATE = "Date";
 	public static final String HITS = "hits";
-	public static Scanner sc = new Scanner(System.in);
 
 	void run() {
 		dbinit();
